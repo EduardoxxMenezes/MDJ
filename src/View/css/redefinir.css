@@ -1,0 +1,82 @@
+/*deixar mais bonito*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    font-family: "popins", sans-serif;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    font-size: 16px;
+}
+
+
+main    {
+    height: 100%;
+    width: 100%;
+}
+
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 78%;
+    width: 100%;
+}
+
+
+
+
+img {
+    margin-top: 5%;
+    width: 50px;
+    height: auto;
+}
+
+
+#filho1 {
+    display: grid;
+    background-color: rgb(186, 178, 178);
+    gap: 15px;
+    padding: 3.2%;
+    text-align: center;
+    border-radius: 8px;
+    width: 400px;
+    margin: 1% auto;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+#inputEmail, 
+#confirmar {
+    display: block;
+    margin: 1% auto;
+    font-size: 100%;
+    width: 90%;
+}
+
+#confirmar{ background-color: #6152cd; /* Roxo azulado */
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: scale(0.98);
+  }
+  
+ #confirmar:hover {
+    background-color: #342795;
+      transform: scale(1.05);
+  }

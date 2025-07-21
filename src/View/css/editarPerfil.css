@@ -1,0 +1,66 @@
+#inputs {
+    width: 40%;
+    height: 40%;
+    background-color: rgb(186, 178, 178);
+    border-radius: 8%;
+    text-align: center;
+  }
+  
+  .file-input {
+    width: 150px;
+    height: 150px;
+    background-color: #eee;
+    display: grid;
+    grid-template-areas: "stack";
+    border-radius: 200px;
+    cursor: pointer;
+  }
+  
+  .file-input > *{
+    grid-area: stack;
+  }
+  
+  .file-input > input {
+    opacity: 0;
+  }
+  
+  .drop-zone  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 300ms;
+    position: relative;
+  }
+  
+  .file-input > .drop-zone  {
+    margin: 12px;
+    width: 120px;
+    border: dashed 2px #aaa;
+    border-radius: 200px;
+    text-align: center;
+  }
+  
+  .file-input.active > .drop-zone {
+    margin: 14px;
+    background-color: #19335a;
+  }
+  
+  .drop-zone p {
+    z-index: 99;
+    text-shadow: rgba(18, 18, 18, 0.5) 1px - 20px;
+  }
+  
+  .drop-zone img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.8;
+    transition: opacity 500ms;
+    object-fit: cover;
+  
+  }
+  
+  .file-input:hover .drop-zone > img{
+    opacity: 0.1;
+  }

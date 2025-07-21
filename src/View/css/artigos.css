@@ -1,0 +1,48 @@
+body {
+  color: white;
+}
+
+
+#abaInfos {
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 30px 20px 10px;
+  color: white;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin: 10px 20px;  
+  background-color: #c0d4d4;
+  color: black;
+
+}
+
+.author img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid white;
+  box-shadow: 0 0 10px #ffffff60;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.descrição {
+  margin: 20px;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #e6e6e6;
+}
+

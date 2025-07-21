@@ -1,0 +1,44 @@
+/*fazer o transform e o transition ajeitar TEXTAREA*/
+
+  .container {
+    width: 300px;
+    margin: 40px auto;
+    text-align: center;
+  }
+  
+  textarea {
+    width: 93.2%;
+    height: 150px;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    resize: none;
+    border-radius: 6px;
+    box-shadow: 2px 2px 1px black;
+  }
+  
+  button {
+    color: white;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-radius: 6px;
+    font-weight: bold;
+  }
+  
+  a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    display: block;
+    margin-top: 10px;
+  }
+
+  p{
+    color: white;
+  }
+  
+  h2{
+    text-align: left;
+    width: 400px;
+    color: white;
+  }

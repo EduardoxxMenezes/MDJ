@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redefinir Senha</title>
+    <link rel="stylesheet" href="./css/globalStyle.css" />
+    <link rel="stylesheet" href="./css/redefinir2.css" />
+    <link rel="icon" href="../img/logo.png" />
+  </head>
+  <body>
+    
+    <header>
+      <div id="abaInfos">
+        <figure id="logoFigure">
+          <img id="imgLogo" src="./img/logo.png" alt="Logo" />
+        </figure>
+
+        <figure id="nomeFigure">
+          <img src="./img/manualJovem.png" alt="Manual_do_Jovem" id="nomeImg" />
+        </figure>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <div id="divCampos">
+          <p>Enviamos um código de verificação para você</p>
+          <p>Insira nos campos abaixo o código recebido por email</p>
+          <div>
+            <form action="">
+              <input
+                type="text"
+                maxlength="1"
+                id="campo1"
+                class="campo"
+                pattern="[0-9]{1}"
+                required
+              />
+              <input
+                type="text"
+                maxlength="1"
+                id="campo2"
+                class="campo"
+                pattern="[0-9]{1}"
+                required
+              />
+              <input
+                type="text"
+                maxlength="1"
+                id="campo3"
+                class="campo"
+                pattern="[0-9]{1}"
+                required
+              />
+              <input
+                type="text"
+                maxlength="1"
+                id="campo4"
+                class="campo"
+                pattern="[0-9]{1}"
+                required
+              />
+              <button type="submit" id="confirmar">confirmar</button>
+            </form>
+          </div>
+        </div>
+
+        <footer class="footer">
+          © 2025 Desenvolvido por TDS. Todos os direitos reservados.
+        </footer>
+      </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  </body>
+</html>

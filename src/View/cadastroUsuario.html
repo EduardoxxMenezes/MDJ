@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastrar Usuário</title>
+    <link rel="stylesheet" href="./css/cadastroUsuario.css" />
+    <link rel="stylesheet" href="./css/globalStyle.css" />
+    <link rel="icon" href="../img/logo.png" />
+  </head>
+  <body>
+    <main>
+      <div id="container">
+        <div id="informacoes">
+          <figure>
+            <img src="./img/logo.png" alt="" />
+          </figure>
+          <h2 id="breveDescricao">
+            Escolha um nome de usuario <br />
+            voce pode altera-lo quando quiser.
+          </h2>
+        </div>
+        <form id="inputs">
+          <input
+            id="nome"
+            class="inputText"
+            type="text"
+            placeholder="Nome de Usuário"
+            required
+          />
+          <input
+            id="email"
+            class="inputText"
+            type="email"
+            placeholder="Email"
+            required
+          />
+          <input
+            id="senha"
+            class="inputText"
+            type="password"
+            placeholder="Senha"
+            required
+            minlength="8"
+          />
+          <input
+            id="confSenha"
+            class="inputText"
+            type="password"
+            placeholder="Confirmar Senha"
+            required
+            minlength="8"
+          />
+          <div>
+            <button id="botaoConfirmar">Confirmar</button>
+          </div>
+        </form>
+        <footer>
+          <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
+        </footer>
+      </div>
+    </main>
+    <script src="./js/fotoPerfil.js"></script>
+    <script src="./js/cadastro.js"></script>
+  </body>
+</html>
