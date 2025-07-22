@@ -34,14 +34,6 @@ main    {
 
 
 
-
-img {
-    margin-top: 5%;
-    width: 50px;
-    height: auto;
-}
-
-
 #filho1 {
     display: grid;
     background-color: rgb(186, 178, 178);
@@ -60,23 +52,35 @@ img {
 #confirmar {
     display: block;
     margin: 1% auto;
-    font-size: 100%;
-    width: 90%;
+    width: 80%;
+    padding: 8px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
 }
 
-#confirmar{ background-color: #6152cd; /* Roxo azulado */
+#inputEmail{
+    margin-bottom: -7%;;
+}
+
+#confirmar{ 
+    background-color: #6152cd; 
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 12px ;
     border-radius: 8px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.2s;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: scale(0.98);
   }
+
   
  #confirmar:hover {
     background-color: #342795;
-      transform: scale(1.05);
+      transform: scale(1.01);
   }
+
+p{
+    font-size: 18px;
+}

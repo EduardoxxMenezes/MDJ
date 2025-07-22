@@ -8,7 +8,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Poppins", sans-serif;
-  background-color: #182031;
+  background: linear-gradient(to bottom, #182031, #28334b);
 }
 
 #Titulo {
@@ -25,7 +25,7 @@ button{
 }
 
 footer {
-  background-color: #172032;
+  background: linear-gradient(50deg,#4c4199, #111827);
   color: rgb(255, 255, 255);
   padding: 1rem;
   text-align: center;
@@ -86,9 +86,11 @@ img {
   height: auto;
   margin-left: 3px;
   border: none;
+  background: none;
 }
 
 #imgLogo {
-  margin-left: 3px;
+  margin-left: 5px;
   border: none;
+  margin-top: -15%;
 }

@@ -44,21 +44,31 @@ img {
   width: 40px;
 }
 
-button {
-  background-color: #263044;
+button { background-color: #6152cd;
+  color: white;
   border: none;
-  margin-top: 8px;
-  margin-left: 3px;
+  padding: 8.5px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(0.98);
+  width: 50%;
+  margin-top: 1.5%;
 }
 
 figure {
   height: 52px;
 }
 
-#confirmar {
-  background-color: white;
-  border: 2px solid black;
-  height: 30px;
+#primeiraLinha{
+  font-size: 18.5px;
+}
+
+#segundaLinha{
+  font-size: 13px;
+  margin-top: 10%;
 }
 
 .campo {

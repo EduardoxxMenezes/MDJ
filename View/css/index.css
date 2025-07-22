@@ -1,4 +1,4 @@
-/*ajeitar inputs e letras*/
+
 #container {
   background-color: #111827;
   height: 100%;
@@ -53,7 +53,7 @@ figure {
 button { background-color: #6152cd;
   color: white;
   border: none;
-  padding: 12px 24px;
+  padding: 10px;
   border-radius: 8px;
   font-size: 16px;
   cursor: pointer;
@@ -73,16 +73,18 @@ button:hover {
 #entrarConta,
 #criarConta {
   display: block;
-  margin: 1.8% auto;
+  margin: 0.5% auto;
   font-size: auto;
-  width: 80%;
+  width: 75%;
+  margin-top: 3%;
 }
 
 #usuario,
 #senha {
-  height: 8.5%;
-  border-radius: 8px;
+  height: 8%;
+  border-radius: 5px;
   border: none;
+  padding: 5px;
 }
 
 #entrarConta,

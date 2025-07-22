@@ -1,0 +1,48 @@
+
+#container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: transparent;
+}
+
+#container h2 {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+}
+
+#forms {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#forms input {
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+
+button {
+  background-color: #6152cd;
+  color: white;
+  border: none;
+  padding: 8.5px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: scale(0.98);
+  width: 50%;
+  margin-top: 1.5%;
+}
+
+button:hover {
+  cursor: pointer;
+}
