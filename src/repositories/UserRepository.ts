@@ -4,9 +4,9 @@ import { user } from "../Model/User";
 export class UserRepository {
   private reposit = AppDataSource.getRepository(user);
 
-  async createUser(name: string, email: string, password: string, profilePicture: Blob) {
+  async createUser(name: string, email: string, password: string, profilePicture: string) {
     const newUser = new user(name, email, password, profilePicture);
-    // Não precisa reatribuir os campos que já foram passados no construtor
+    
     return await this.reposit.save(newUser);
   }
 

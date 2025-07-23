@@ -1,38 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contato</title>
-    <link rel="stylesheet" href="./css/globalStyle.css">
-    <link rel="stylesheet" href="./css/contato.css">
+    <link rel="stylesheet" href="./css/globalStyle.css" />
+    <link rel="stylesheet" href="./css/contato.css" />
     <link rel="icon" href="./img/logo.png" />
   </head>
-<body>
+  <body>
     <header>
-        <div id="abaInfos">
-            <figure id="logoFigure">
-              <img id="imgLogo"
-                src="./img/logo.png" alt="Logo"
-              />
-            </figure>
-        
-            <figure id="nomeFigure">
-              <img src="./img/manualJovem.png" alt="Manual_do_Jovem" id="nomeImg">
-            </figure>
-        </div>
-      </header>
-      <main class="container">
-    <div class="informa">
+      <div id="abaInfos">
+        <figure id="logoFigure">
+          <img id="imgLogo" src="./img/logo.png" alt="Logo" />
+        </figure>
+
+        <figure id="nomeFigure">
+          <img src="./img/manualJovem.png" alt="Manual_do_Jovem" id="nomeImg" />
+        </figure>
+      </div>
+
+      <div id="fotoDiv">
+        <button id="fotoBtn" type="button">
+          <img src="./img/fotoPadrao.png" alt="Foto Perfil" id="fotoImg" />
+        </button>
+      </div>
+    </header>
+    <main class="container">
+      <div class="informa">
         <h2>Entre em contato conosco!</h2>
         <textarea placeholder="Escreva sua dúvida ou sua reclamação"></textarea>
         <button>ENVIAR</button>
         <p>ou</p>
-        <a href="mailto:suportemanualdojovem@gmail.com" target="_blank">suportemanualdojovem@gmail.com</a>
+        <a href="mailto:suportemanualdojovem@gmail.com" target="_blank"
+          >suportemanualdojovem@gmail.com</a
+        >
       </div>
     </main>
-      <footer>
-        <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
-      </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="./js/alterarFotoPerfil.js"></script>
+    <script src="./js/areaOpcoes.js" defer></script>
+  </body>
 </html>

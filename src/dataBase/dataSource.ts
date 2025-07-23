@@ -18,7 +18,7 @@ if (isProduction) {
         type: "postgres",                       // Tipo de banco de dados (no Render, geralmente é PostgreSQL)
         url: process.env.DATABASE_URL,          // URL de conexão do banco de dados
         ssl: { rejectUnauthorized: false },     // Necessário para conexões seguras
-        entities: ["./dist/models/*.js"],       // Caminho para os modelos compilados
+        entities: ["./dist/Model/*.js"],       // Caminho para os modelos compilados
         migrations: ["./dist/migrations/*.js"], // Caminho para as migrações compiladas
         synchronize: false,                     // Nunca usar synchronize em produção
         logging: false,                         // Desabilita logs SQL em produção
@@ -36,7 +36,7 @@ if (isProduction) {
         username: DB_USER,
         password: DB_PASSWORD,
         database: DB_NAME,
-        entities: ["./src/models/*.ts"],
+        entities: ["./src/Model/*.ts"],
         migrations: ["./src/migrations/*.ts"],
         synchronize: true,
         logging: true,

@@ -5,14 +5,14 @@
 #divInfos {
   position: absolute;
   right: 0;
-  top: 60px; /* adiciona pra posicionar melhor */
+  top: 60px; 
   background: #dbdada;
   padding: 20px;
   border-radius: 10px 0 0 10px;
   width: 200px;
   box-shadow: inset 2px -2px 3px #263044;
   color: black;
-  display: flex; /* padrão quando mostrar */
+  display: flex; 
   flex-direction: column;
   gap: 30px;
 }

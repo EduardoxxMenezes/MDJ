@@ -24,24 +24,22 @@ button{
   background-color: #6152cd;
 }
 
+/*botar o insta e no email*/
+
 footer {
   background: linear-gradient(50deg,#4c4199, #111827);
   color: rgb(255, 255, 255);
   padding: 1rem;
-  text-align: center;
+  text-align: left;
   font-size: 0.9rem;
   bottom: 0;
   position: fixed;
   width: 100%;
-  border-top: solid white;
+  box-shadow: inset 2px -2px 3px #263044;
+  align-items: center;
 }
 
-header {
-  display: flex;
-  width: 100vw;
-  height: 13vh;  
-  background: linear-gradient(50deg,#4c4199, #111827);
-}
+
 
 
 

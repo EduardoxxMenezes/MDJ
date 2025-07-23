@@ -1,28 +1,31 @@
 const form = document.querySelector("#inputs");
 const botaoConfirmar = document.querySelector("#botaoConfirmar");
 
-
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    const name = document.querySelector("#nome").value
+    const name = document.querySelector("#nome").value;
     const email = document.querySelector("#email").value;
     const password = document.querySelector("#senha").value;
     const confPassword = document.querySelector("#confSenha").value;
 
-    if(password != confPassword){
+    if (password !== confPassword) {
         alert("A senha e a confirmação de senha devem ser iguais!");
-        console.log(password, "CONFIRMAÇÃO: ", confPassword)
         return;
     }
-    
+
     try {
-        const res = await fetch("http://localhost:3000/api/user",{
+        const fotoRes = await fetch("https://randomuser.me/api/");
+        const fotoData = await fotoRes.json();
+        const fotoPerfil = fotoData.results[0].picture.large;
+
+        const res = await fetch("http://localhost:3000/api/user", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({ name, email, password, profilePic})
+           credentials: 'include',
+            body: JSON.stringify({ name, email, password, fotoPerfil })
         });
 
         if (res.ok) {

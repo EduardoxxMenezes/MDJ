@@ -82,21 +82,21 @@ html {
 }
 
 #aCriar {
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   bottom: 80px;
   right: 15px;
   border-radius: 200px;
   box-shadow: inset 2px 2px 5px #263044;
   display: flex;
   position: fixed;
-  background-color: #4c4199;
-  background-image: url("../img/criarImg.png");
+  background-color:#182031;
+  background-image: url("../img/pena.png");
   background-size: 70%;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 #aCriar:hover{
-  background-color: #4230b3;
+  background-color: #28334b;
 }

@@ -8,7 +8,7 @@ export class ArticleRepository {
   async createArticle(
     title: string,
     description: string,
-    content: Text,
+    content: string,
     createdAt: Date,
     author: user,
     category: string

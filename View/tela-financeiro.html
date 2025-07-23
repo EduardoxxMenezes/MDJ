@@ -6,27 +6,31 @@
     <title>Financeiro</title>
     <link rel="stylesheet" href="./css/globalStyle.css" />
     <link rel="stylesheet" href="./css/tela-artigos.css" />
-  <link rel="icon" href="./img/logo.png">
+    <link rel="icon" href="./img/logo.png" />
   </head>
   <body>
-      <header>
-        <div id="abaInfos">
-            <figure id="logoFigure">
-              <img id="imgLogo"
-                src="./img/logo.png" alt="Logo"
-              />
-            </figure>
-        
-            <figure id="nomeFigure">
-              <img src="./img/manualJovem.png" alt="Manual_do_Jovem" id="nomeImg">
-            </figure>
-         
-        </div>
-      </header>
+    <header>
+      <div id="abaInfos">
+        <figure id="logoFigure">
+          <img id="imgLogo" src="./img/logo.png" alt="Logo" />
+        </figure>
+
+        <figure id="nomeFigure">
+          <img src="./img/manualJovem.png" alt="Manual_do_Jovem" id="nomeImg" />
+        </figure>
+      </div>
+
+      <div id="fotoDiv">
+        <button id="fotoBtn" type="button">
+          <img src="./img/fotoPadrao.png" alt="Foto Perfil" id="fotoImg" />
+        </button>
+      </div>
+    </header>
 
     <div class="container">
-
-      <a href="./criarArtigo.html" id="aCriar"><button id="btnCriar"></button></a>
+      <a href="./criarArtigo.html" id="aCriar"
+        ><button id="btnCriar"></button
+      ></a>
 
       <button class="aba">
         <h3>Como paga um imposto de renda</h3>
@@ -91,5 +95,8 @@
     <footer class="footer">
       © 2025 Desenvolvido por TDS. Todos os direitos reservados.
     </footer>
+
+    <script src="./js/alterarFotoPerfil.js"></script>
+    <script src="./js/areaOpcoes.js" defer></script>
   </body>
 </html>

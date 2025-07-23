@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar Foto de Perfil</title>
+    <link rel="stylesheet" href="./css/alterarFotoPerfil.css">
+    <link rel="stylesheet" href="./css/globalStyle.css">
+    <link rel="icon" href="./img/logo.png" />
+
+</head>
+
+<body>
+    <header>
+        <div id="abaInfos">
+            <figure id="logoFigure">
+                <img id="imgLogo" src="./img/logo.png" alt="Logo" />
+            </figure>
+
+            <figure id="nomeFigure">
+                <img src="./img/manualJovem.png" alt="Manual_do_Jovem" id="nomeImg">
+            </figure>
+        </div>
+
+        <div id="fotoDiv">
+            <button id="fotoBtn" type="button">
+                <img src="./img/fotoPadrao.png" alt="Foto Perfil" id="fotoImg" />
+            </button>
+        </div>
+    </header>
+
+    <div id="divInfos" class="hidden">
+        <div id="opcoesPerfil">
+            <a href="./editarPerfil.html" class="hrefPerfil">Editar Perfil</a>
+            <a href="./contato.html" class="hrefPerfil">Entrar em contato</a>
+            <a href="./redefinir.html" class="hrefPerfil">Redefinir Senha</a>
+            <a href="alterarFotoPerfil.html" class="hrefPerfil">Alterar foto de perfil</a>
+        </div>
+    </div>
+
+    <main id="container">
+        <form for="file" class="file-input">
+            <div class="drop-zone" id="drop-zone">
+                <p id="text"><b>Selecione/solte</b> sua nova foto </p>
+            </div>
+            <input type="file" id="file">
+        </form>
+        <button id="alterarFoto" onclick="removerFoto()">Salvar nova foto de perfil</button>
+
+        
+        <footer class="footer">
+            © 2025 Desenvolvido por TDS. Todos os direitos reservados.
+        </footer>
+    </main>
+
+    <script src="./js/alterarFotoPerfil.js"></script>
+    <script src="./js/areaOpcoes.js"></script>
+</body>
+
+</html>

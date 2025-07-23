@@ -1,0 +1,82 @@
+html, body  {
+    overflow: hidden;
+}
+
+#container  {
+  width: 100vw;
+  height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.file-input {
+    width: 200px;
+    height: 200px;
+    background-color: #eee;
+    display: grid;
+    grid-template-areas: "stack";
+    border-radius: 200px;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+.file-input>* {
+    grid-area: stack;
+}
+
+input {
+    cursor: pointer;
+    opacity: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+}
+
+.file-input>.drop-zone {
+    width: 196px;
+    height: 196px;
+    border: dashed 2px hsl(0, 0%, 67%);
+    border-radius: 200px;
+    text-align: center;
+}
+
+.file-input.active>.drop-zone {
+    background-color: #19335a;
+}
+
+.drop-zone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 200ms;
+    position: relative;
+
+}
+
+.drop-zone p {
+    z-index: 99;
+    text-shadow: rgba(18, 18, 18, 0.5) 1px 0 20px;
+}
+
+.drop-zone img  {
+    width: 200px;
+    height: 200px;
+    border-radius: 200px;
+    position: absolute;
+    z-index: 0;
+    opacity: 0.8;
+    transition: opacity 500ms;
+    object-fit: cover;
+}
+
+.file-input:hover .drop-zone > img  {
+    opacity: 0.1;
+}
+
+#alterarFoto    {
+    margin-top: 40px;
+    width: 200px;
+    height: 50px;
+    border-radius: 8px;
+}
