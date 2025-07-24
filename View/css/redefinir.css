@@ -32,27 +32,29 @@ main    {
     width: 100%;
 }
 
-
-
 #filho1 {
     display: grid;
     background-color: rgb(186, 178, 178);
     gap: 15px;
     padding: 3.2%;
-    text-align: center;
+    align-items: center;
     border-radius: 8px;
     width: 400px;
     margin: 1% auto;
-    height: 200px;
+    height: 250px;
     justify-content: center;
     align-items: center;
 }
 
-#inputEmail, 
-#confirmar {
+#filho1 > *   {
+    margin: 0 !important;
+    justify-self: center
+}
+
+#inputEmail {
     display: block;
     margin: 1% auto;
-    width: 80%;
+    width: 350px;
     padding: 8px;
     border: none;
     border-radius: 10px;
@@ -63,23 +65,6 @@ main    {
     margin-bottom: -7%;;
 }
 
-#confirmar{ 
-    background-color: #6152cd; 
-    color: white;
-    border: none;
-    padding: 12px ;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-
-  
- #confirmar:hover {
-    background-color: #342795;
-      transform: scale(1.01);
-  }
 
 p{
     font-size: 18px;

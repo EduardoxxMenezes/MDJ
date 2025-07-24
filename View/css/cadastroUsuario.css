@@ -2,40 +2,22 @@
 
 html,
 body {
-  height: 100vh;
-  width: 100vw;
-  font-family: "Poppins", sans-serif;
-  margin: 0%;
-  padding: 0%;
   overflow: hidden;
 }
 
+
 #container {
-  background-color: #111827;
-  height: 100%;
+  align-items: center;
+  height: calc(100vh - 65px - 54px);
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
-main {
-  height: 100%;
-}
-
-#esquecisenha {
-  z-index: 1;
-  color: rgb(172, 8, 8);
-}
-
-#esquecisenha:hover {
-  color: rgb(174, 6, 6);
-}
-
-img {
-  width: 40% !important;
-  height: auto !important;
+#imgLogo {
+  width: 40%;
+  height: auto;
 }
 
 figure {
@@ -56,33 +38,23 @@ figure {
 }
 
 #inputs {
-  padding: 8px;
   width: 550px;
-  height: 200px;
-  background-color: rgb(186, 178, 178);
-  border-radius: 8%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
   text-align: center;
+  flex-direction: column;
+  padding: 8px;
+  border-radius: 8%;
+  background-color: rgb(186, 178, 178);
 }
 
-.inputText  {
+.inputText {
   font-size: 120%;
 }
 
-button { background-color: #6152cd;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: scale(0.98);
-}
-
-button:hover {
-  background-color: #342795;
-    transform: scale(1.05);
+#botaoConfirmar {
+  width: 270px;
 }
 
 #email,
@@ -92,180 +64,26 @@ button:hover {
   display: block;
   margin: 1.8% auto;
   font-size: auto;
-  width: 80%;
-  height: 12%;
+  width: 320px;
+  padding: 8px;
+  height: 25px;
   border-radius: 8px;
   border: none;
 }
 
 
-#entrarConta,
-#criarConta {
-  overflow: hidden;
-}
+@media screen and (max-width: 721px) {
 
-
-@media (max-width: 768px) {
   #container {
     flex-direction: column;
-    gap: 20px;
   }
 
-  figure  {
-    margin-left: 30px;
+  #inputs {
+    width: 400px;
   }
 
-  #breveDescricao {
-    margin-left: 30px;
-  }
-
-  #filho1 {
+  #informacoes {
     margin-right: 0;
-
-  }
-
-  #filho2 {
-    height: 30% !important; 
-    width: 70% !important;
-  }
-
-  #breveDescricao {
-    font-size: 100% !important;
-  }
-}
-
-
-@media (max-width: 1024px) {
-
-  #breveDescricao {
-    font-size: 200%;
-  }
-
-  #filho2 {
-    height: 21%;
-    width: 70%;
-  }
-}
-
-@media  (min-width: 1024px) and (min-height: 600px) {
-  img {
-    width: 12%;
-    height: auto;
-  }
-  #filho2 {
-    margin-bottom: 6%;
-    height: 44%;
-    width: 65%;
-  }
-
-  #inputs {
-    margin-bottom: 50px;
-  }
-
-  #breveDescricao {
-    margin-top: 120px;
-  }
-}
-
-@media (max-width: 480px) {
-  #inputs {
-    width: 90%;
-    height: auto;
-    padding: 20px 0;
-  }
-
-  #email,
-  #senha,
-  #nome,
-  #confSenha {
-    font-size: 14px;
-    height: 35px;
-  }
-
-  button {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  #breveDescricao {
-    font-size: 90%;
-    padding: 0 10px;
-  }
-
-
-
-  img {
-    width: 30% !important;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  #inputs {
-    width: 80%;
-    height: auto;
-  }
-
-  img {
-    width: 25% !important;
-  }
-
-  #email,
-  #senha,
-  #nome,
-  #confSenha {
-    height: 38px;
-  }
-
-  button {
-    font-size: 15px;
-  }
-}
-
-@media (min-width: 769px) and (max-width: 1023px) {
-  #inputs {
-    margin-bottom: 250px;
-    width: 65%;
-    height: auto;
-  }
-
-  #informacoes  {
-    margin-top: 260px;
-  }
-
-  img {
-    width: 20% !important;
-  }
-
-  #email,
-  #senha,
-  #nome,
-  #confSenha {
-    height: 40px;
-  }
-
-  button {
-    font-size: 16px;
-  }
-}
-
-@media (min-width: 1025px) {
-  #inputs {
-    max-width: 550px;
-    height: auto;
-  }
-
-  #informacoes  {
-    height: 200px;
-  }
-
-  #breveDescricao {
-    margin-top: 20px;
-  }
-
-  #email,
-  #senha,
-  #nome,
-  #confSenha {
-    height: 45px;
+    align-items: center;
   }
 }

@@ -34,8 +34,8 @@ input {
 }
 
 .file-input>.drop-zone {
-    width: 196px;
-    height: 196px;
+    width: 200px;
+    height: 200px;
     border: dashed 2px hsl(0, 0%, 67%);
     border-radius: 200px;
     text-align: center;

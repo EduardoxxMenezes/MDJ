@@ -82,5 +82,7 @@ function removerFoto() {
     } else {
         image.src = fotoPadrao;
         novaFoto = fotoPadrao;
+
+        localStorage.setItem("novaFoto", novaFoto);
     }
 }

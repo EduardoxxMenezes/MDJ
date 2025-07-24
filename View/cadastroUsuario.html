@@ -1,66 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cadastrar Usuário</title>
-    <link rel="stylesheet" href="./css/cadastroUsuario.css" />
-    <link rel="stylesheet" href="./css/globalStyle.css" />
-    <link rel="icon" href="./img/logo.png" />
-  </head>
-  <body>
-    <main>
-      <div id="container">
-        <div id="informacoes">
-          <figure>
-            <img src="./img/logo.png" alt="" />
-          </figure>
-          <h2 id="breveDescricao">
-            Escolha um nome de usuario <br />
-            voce pode altera-lo quando quiser.
-          </h2>
-        </div>
-        <form id="inputs">
-          <input
-            id="nome"
-            class="inputText"
-            type="text"
-            placeholder="Nome de Usuário"
-            required
-          />
-          <input
-            id="email"
-            class="inputText"
-            type="email"
-            placeholder="Email"
-            required
-          />
-          <input
-            id="senha"
-            class="inputText"
-            type="password"
-            placeholder="Senha"
-            required
-            minlength="8"
-          />
-          <input
-            id="confSenha"
-            class="inputText"
-            type="password"
-            placeholder="Confirmar Senha"
-            required
-            minlength="8"
-          />
-          <div>
-            <button id="botaoConfirmar">Confirmar</button>
-          </div>
-        </form>
-        <footer>
-          <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
-        </footer>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastrar Usuário</title>
+  <link rel="icon" href="./img/logo.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./css/globalStyle.css" />
+  <link rel="stylesheet" href="./css/cadastroUsuario.css" />
+</head>
+
+<body>
+
+  <header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+    style="display: flex; width: 100vw; height: 13vh;background: linear-gradient(50deg,#4c4199, #111827); ">
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a href="../index.html" class="d-inline-flex align-items-center text-decoration-none">
+        <img src="./img/logo.png" alt="Logo" width="60" height="50" class="me-2" />
+        <span class="text-white fs-4">Manual do Jovem</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="container">
+    <div id="informacoes">
+      <figure>
+        <img src="./img/logo.png" alt="" id="imgLogo" />
+      </figure>
+      <h2 id="breveDescricao">
+        Escolha um nome de usuário <br />
+        voce poderá alterá-lo quando quiser.
+      </h2>
+    </div>
+    <form id="inputs">
+      <input id="nome" class="inputText" type="text" placeholder="Nome de Usuário" required />
+      <input id="email" class="inputText" type="email" placeholder="Email" required />
+      <input id="senha" class="inputText" type="password" placeholder="Senha" required minlength="8" />
+      <input id="confSenha" class="inputText" type="password" placeholder="Confirmar Senha" required minlength="8" />
+      <div id=divConfirmar>
+        <button id="botaoConfirmar" class="buttonTheme">Confirmar</button>
       </div>
-    </main>
-    <script src="./js/fotoPerfil.js"></script>
-    <script src="./js/cadastro.js"></script>
-  </body>
+    </form>
+    <footer>
+      <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
+    </footer>
+  </main>
+  <script src="./js/fotoPerfil.js"></script>
+  <script src="./js/cadastro.js"></script>
+</body>
+
 </html>
