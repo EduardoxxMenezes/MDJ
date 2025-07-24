@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Manual do Jovem</title>
+  <link rel="icon" href="./View/img/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="./View/css/globalStyle.css">
   <link rel="stylesheet" href="./View/css/index.css">
-  <link rel="icon" href="./View/img/logo.png">
 </head>
+
 <body>
-  <main>
-    <div id="container"> 
-    
-      <div class="infos" id="filho1">
-        <figure>
-          <img src="/src/View/img/logo.png" alt="" />
-        </figure>
-        <h1 id="Titulo">
-          Manual do Jovem
-        </h1>
-        <p id="breveDescricao">
-          Integrando o jovem à vida adulta de maneira mais facil <br>
+
+  <header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+    style="display: flex; width: 100vw; height: 13vh;background: linear-gradient(50deg,#4c4199, #111827); ">
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a href="./index.html" class="d-inline-flex align-items-center text-decoration-none">
+        <img src="./View/img/logo.png" alt="Logo" width="60" height="50" class="me-2" />
+        <span class="text-white fs-4">Manual do Jovem</span>
+      </a>
+    </div>
+  </header>
+
+  <main id="container">
+
+    <div class="infos" id="filho1">
+      <figure>
+        <img src="./View/img/logo.png" alt="" id="imgLogo" />
+      </figure>
+      <h1 id="Titulo">
+        Manual do Jovem
+      </h1>
+      <p id="breveDescricao">
+        Integrando o jovem à vida adulta de maneira mais facil <br>
         através de artigos para a vida pessoal, financeira e profissional.<br>
-        </p>
-      </div>
-      
-      <div class="infos" id="filho2">
-        <form action="" id="loginForm">
+      </p>
+    </div>
+
+    <div class="infos" id="filho2">
+      <form action="" id="loginForm">
         <input type="text" id="usuario" placeholder="Login">
         <input type="text" id="senha" placeholder="Senha">
         <button id="entrarConta">Entrar</button>
         <p id="outraOpcao">Ou</p>
         <button id="criarConta">Começar agora!</button>
       </form>
-        <a id="esquecisenha" href="./src/View/redefinirSenha.html">Esqueci a senha<a>
-      </div>
+      <a id="esquecisenha" href="./src/View/redefinir.html">Esqueci a senha<a>
     </div>
+    <footer>
+      <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
+    </footer>
   </main>
-  <footer>
-    <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
-  </footer>
   <script src="./View/js/logIn.js"></script>
 </body>
+
 </html>

@@ -1,11 +1,17 @@
-#container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 400px;
-  background-color: transparent;
+* {
+  padding: 0;
+  margin: 0;
 }
 
+#container {
+  width: 100% !important;
+  height: calc(100vh - 73px - 54px) !important;
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  background-color: transparent;
+  gap: 30px !important;
+}
 
 #container h2 {
   color: white;
@@ -14,20 +20,29 @@
   font-size: 18px;
 }
 
+#conteudo {
+  width: 400px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #forms {
   display: flex;
+  align-items: center;
   flex-direction: column;
   gap: 15px;
 }
 
 #forms input {
+  width: 300px;
   padding: 12px;
   border: none;
   border-radius: 10px;
   font-size: 14px;
   box-sizing: border-box;
 }
-
 
 button {
   background-color: #6152cd;
@@ -46,4 +61,80 @@ button {
 
 button:hover {
   cursor: pointer;
+}
+
+#divFotoPerfil {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.file-input {
+  width: 200px;
+  height: 200px;
+  background-color: #eee;
+  display: grid;
+  grid-template-areas: "stack";
+  border-radius: 200px;
+  cursor: pointer;
+}
+
+.file-input > * {
+  grid-area: stack;
+}
+
+#file {
+  cursor: pointer;
+  opacity: 0;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+}
+
+.file-input > .drop-zone {
+  width: 200px;
+  height: 200px;
+  border: dashed 2px hsl(0, 0%, 67%);
+  border-radius: 200px;
+  text-align: center;
+}
+
+.file-input.active > .drop-zone {
+  background-color: #19335a;
+}
+
+.drop-zone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 200ms;
+  position: relative;
+}
+
+.drop-zone p {
+  z-index: 99;
+  text-shadow: rgba(18, 18, 18, 0.5) 1px 0 20px;
+}
+
+.drop-zone img {
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.8;
+  transition: opacity 500ms;
+  object-fit: cover;
+}
+
+.file-input:hover .drop-zone > img {
+  opacity: 0.1;
+}
+
+#alterarFoto {
+  width: 200px;
+  height: 50px;
+  border-radius: 8px;
+  margin-top: 20px;
 }

@@ -4,12 +4,23 @@
 }
 
 html,
-body {
-  height: 100%;
-  width: 100%;
+body{
   font-family: "Poppins", sans-serif;
   background: linear-gradient(to bottom, #182031, #28334b);
+}
 
+html  {
+  height: 100vh;
+  width: 100vw;
+}
+
+body  {
+  height: 100%;
+  width: 100%;
+}
+
+p {
+  margin: 0;
 }
 
 #Titulo {
@@ -46,7 +57,6 @@ footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  padding-top: 1rem !important;
   padding: 0;
   align-items: center;
   font-size: 0.9rem;
@@ -157,7 +167,7 @@ img {
 .py-3 {
   width: 100%;
   padding: 0 !important;
-  margin: 0;
+  margin: 0 !important;
 }
 
 li {
@@ -186,9 +196,4 @@ li {
   width: 55px;
   border: 2px solid white;
   border-radius: 50px;
-}
-
-@media screen and (max-width:500px) {
-
-  
 }
