@@ -68,7 +68,7 @@ export class UserController {
       httpOnly: true,
       secure: process.env.NODE_ENV === "production",
       sameSite: "none",
-      maxAge: 1000 * 60 * 60 // 1 hora
+      maxAge: 1000 * 60 * 60 
     });
 
     res.json({ message: "Login autorizado", user: userWithoutPassword, token });

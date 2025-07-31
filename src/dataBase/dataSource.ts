@@ -36,13 +36,13 @@ if (isProduction) {
     username: DB_USER,
     password: DB_PASSWORD,
     database: DB_NAME,
-    entities: [__dirname + "/../Model/*.ts"], // Caminho absoluto para entidades TypeScript
+    entities: [__dirname + "/../Model/*.ts"], 
     migrations: [__dirname + "/../migrations/*.ts"],
     synchronize: false,
     logging: true,
 };
 }
 
-// Criação do DataSource com base nas opções acima
+
 const AppDataSource = new DataSource(dataSourceOptions);
 export default AppDataSource;
