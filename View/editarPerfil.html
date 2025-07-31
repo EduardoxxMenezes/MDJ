@@ -1,122 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Editar</title>
 
-    <link rel="icon" href="./img/logo.png" />
-    <link
-    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-    rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./css/globalStyle.css" />
-    <link rel="stylesheet" href="./css/editarPerfil.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Editar</title>
 
-  <body>
-    <header
-      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
-      style="
+  <link rel="icon" href="./img/logo.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/globalStyle.css" />
+  <link rel="stylesheet" href="./css/editarPerfil.css" />
+</head>
+
+<body>
+  <header
+    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+    style="
         display: flex;
         width: 100vw;
         height: 13vh;
         background: linear-gradient(50deg, #4c4199, #111827);
-      "
-    >
-      <div class="col-md-3 mb-2 mb-md-0">
-        <a
-          href="/"
-          class="d-inline-flex align-items-center text-decoration-none"
-        >
-          <img
-            src="./img/logo.png"
-            alt="Logo"
-            width="60"
-            height="50"
-            class="me-2"
-          />
-          <span class="text-white fs-4">Manual do Jovem</span>
-        </a>
+      ">
+    <div class="col-md-3 mb-2 mb-md-0">
+      <a href="./editarPerfil.html" class="d-inline-flex align-items-center text-decoration-none">
+        <img src="./img/logo.png" alt="Logo" width="60" height="50" class="me-2" />
+        <span class="text-white fs-4">Manual do Jovem</span>
+      </a>
+    </div>
+
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" id="opcoesHeader">
+      <li>
+        <a href="./tela-profissional.html" class="nav-link px-2 icon-home ativo" style="color: white">Profissional</a>
+      </li>
+      <li>
+        <a href="./tela-financeiro.html" class="nav-link px-2 icon-criar ativo" style="color: white">
+          Financeiro</a>
+      </li>
+      <li>
+        <a href="./tela-pessoal.html" class="nav-link px-2 icon-insc ativo" style="color: white">Pessoal</a>
+      </li>
+    </ul>
+
+    <div id="fotoDiv">
+      <button id="fotoBtn" type="button">
+        <img src="./img/fotoPadrao.png" alt="Foto Perfil" id="fotoImg" />
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="divInfos" class="hidden">
+      <div id="opcoesPerfil">
+        <a href="./editarPerfil.html" class="hrefPerfil">Editar Perfil</a>
+        <a href="./contato.html" class="hrefPerfil">Entrar em contato</a>
+        <a href="./redefinir.html" class="hrefPerfil">Redefinir Senha</a>
+        <a href="./tela-profissional.html" class="hrefOpcoesAreas"><b>Área Profissional</b></a>
+        <a href="./tela-financeiro.html" class="hrefOpcoesAreas"><b>Área Financeira</b></a>
+        <a href="./tela-pessoal.html" class="hrefOpcoesAreas"><b>Área Pessoal</b></a>
       </div>
+    </div>
 
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li>
-          <a
-            href="./tela-profissional.html"
-            class="nav-link px-2 icon-home ativo"
-            style="color: white"
-            >Profissional</a
-          >
-        </li>
-        <li>
-          <a
-            href="./tela-financeiro.html"
-            class="nav-link px-2 icon-criar ativo"
-            style="color: white"
-          >
-            Financeiro</a
-          >
-        </li>
-        <li>
-          <a
-            href="./tela-pessoal.html"
-            class="nav-link px-2 icon-insc ativo"
-            style="color: white"
-            >Pessoal</a
-          >
-        </li>
+    <div id="conteudo">
+      <h2>Configure seu perfil</h2>
+      <section id="forms">
+        <input type="text" id="nome" placeholder="Alterar nome de usuário" />
+        <input type="email" id="email" placeholder="Alterar email" />
+        <button class="buttonTheme" id="botao">ALTERAR INFORMAÇÕES</button>
+      </section>
+    </div>
 
-        <div id="fotoDiv">
-          <button id="fotoBtn" type="button">
-            <img src="./img/fotoPadrao.png" alt="Foto Perfil" id="fotoImg" />
-          </button>
+    <div id="divFotoPerfil">
+      <form for="file" class="file-input">
+        <div class="drop-zone" id="drop-zone">
+          <p id="text"><b>Selecione/solte</b> sua nova foto</p>
         </div>
-      </ul>
-    </header>
+        <input type="file" id="file" />
+      </form>
+      <button id="alterarFoto" onclick="removerFoto()" class="buttonTheme">
+        Remover foto de perfil
+      </button>
+    </div>
 
-    <main id="container">
-      <div id="divInfos" class="hidden">
-        <div id="opcoesPerfil">
-          <a href="./editarPerfil.html" class="hrefPerfil">Editar Perfil</a>
-          <a href="./contato.html" class="hrefPerfil">Entrar em contato</a>
-          <a href="./redefinir.html" class="hrefPerfil">Redefinir Senha</a>
-          <a href="alterarFotoPerfil.html" class="hrefPerfil"
-            >Alterar foto de perfil</a
-          >
-        </div>
-      </div>
+    <footer>
+    <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
+  </footer>
+  </main>
 
-      <div id="conteudo">
-        <h2>Configure seu perfil</h2>
-        <section id="forms">
-          <input type="text" placeholder="Alterar nome de usuário" />
-          <input type="email" placeholder="Alterar email" />
-          <input type="password" placeholder="Alterar senha" />
-          <input type="password" placeholder="Confirmar Senha" />
+  <script src="./js/alterarFotoPerfil.js"></script>
+  <script src="./js/areaOpcoes.js" defer></script>
+</body>
 
-          <button>ALTERAR INFORMAÇÕES</button>
-        </section>
-      </div>
-
-      <div id="divFotoPerfil">
-        <form for="file" class="file-input">
-          <div class="drop-zone" id="drop-zone">
-            <p id="text"><b>Selecione/solte</b> sua nova foto</p>
-          </div>
-          <input type="file" id="file" />
-        </form>
-        <button id="alterarFoto" onclick="removerFoto()">
-          Remover foto de perfil
-        </button>
-      </div>
-
-      <footer>
-        <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
-      </footer>
-    </main>
-
-    <script src="./js/alterarFotoPerfil.js"></script>
-    <script src="./js/areaOpcoes.js" defer></script>
-  </body>
 </html>

@@ -1,19 +1,19 @@
-import { article, options } from "../Model/Articles";
-import { user } from "../Model/User";
+import { Article, options } from "../Model/Articles";
+import { User } from "../Model/User";
 import AppDataSource from "../dataBase/dataSource";
 
 export class ArticleRepository {
-  private reposit = AppDataSource.getRepository(article);
+  private reposit = AppDataSource.getRepository(Article);
 
   async createArticle(
     title: string,
     description: string,
     content: string,
     createdAt: Date,
-    author: user,
+    author: User,
     category: string
   ) {
-    const newArticle = new article(title, description, content, createdAt, author, category as options);
+    const newArticle = new Article(title, description, content, createdAt, author, category as options);
     return await this.reposit.save(newArticle);
   }
 
@@ -25,7 +25,7 @@ export class ArticleRepository {
     return await this.reposit.findOne({ where: { id } });
   }
 
-  async updateArticle(id: number, fields: Partial<article>) {
+  async updateArticle(id: number, fields: Partial<Article>) {
     const existing = await this.findArticleById(id);
     if (!existing) return null;
 

@@ -12,33 +12,39 @@
 </head>
 
 <body>
-  <header
+   <header
     class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
-    style="display: flex; width: 100vw; height: 13vh;background: linear-gradient(50deg,#4c4199, #111827); ">
+    style="
+        display: flex;
+        width: 100vw;
+        height: 13vh;
+        background: linear-gradient(50deg, #4c4199, #111827);
+      ">
     <div class="col-md-3 mb-2 mb-md-0">
-      <a href="/" class="d-inline-flex align-items-center text-decoration-none">
+      <a href="./tela-pessoal.html" class="d-inline-flex align-items-center text-decoration-none">
         <img src="./img/logo.png" alt="Logo" width="60" height="50" class="me-2" />
         <span class="text-white fs-4">Manual do Jovem</span>
       </a>
     </div>
 
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="./tela-profissional.html" class="nav-link px-2 icon-home ativo"
-          style="color: white;">Profissional</a>
+    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0" id="opcoesHeader">
+      <li>
+        <a href="./tela-profissional.html" class="nav-link px-2 icon-home ativo" style="color: white">Profissional</a>
       </li>
-      <li><a href="./tela-financeiro.html" class="nav-link px-2 icon-criar ativo" style="color: white;"> Financeiro</a>
+      <li>
+        <a href="./tela-financeiro.html" class="nav-link px-2 icon-criar ativo" style="color: white">
+          Financeiro</a>
       </li>
-      <li><a href="./tela-pessoal.html" class="nav-link px-2 icon-insc ativo" style="color: white;">Pessoal</a>
+      <li>
+        <a href="./tela-pessoal.html" class="nav-link px-2 icon-insc ativo" style="color: white">Pessoal</a>
       </li>
-
-
-      <div id="fotoDiv">
-        <button id="fotoBtn" type="button">
-          <img src="./img/fotoPadrao.png" alt="Foto Perfil" id="fotoImg" />
-        </button>
-      </div>
     </ul>
 
+    <div id="fotoDiv">
+      <button id="fotoBtn" type="button">
+        <img src="./img/fotoPadrao.png" alt="Foto Perfil" id="fotoImg" />
+      </button>
+    </div>
   </header>
 
   <main class="container">
@@ -48,7 +54,9 @@
         <a href="./editarPerfil.html" class="hrefPerfil">Editar Perfil</a>
         <a href="./contato.html" class="hrefPerfil">Entrar em contato</a>
         <a href="./redefinir.html" class="hrefPerfil">Redefinir Senha</a>
-        <a href="alterarFotoPerfil.html" class="hrefPerfil">Alterar foto de perfil</a>
+        <a href="./tela-profissional.html" class="hrefOpcoesAreas"><b>Área Profissional</b></a>
+        <a href="./tela-financeiro.html" class="hrefOpcoesAreas"><b>Área Financeira</b></a>
+        <a href="./tela-pessoal.html" class="hrefOpcoesAreas"><b>Área Pessoal</b></a>
       </div>
     </div>
 

@@ -3,17 +3,16 @@
   margin: 0;
 }
 
-#container {
-  width: 100% !important;
-  height: calc(100vh - 73px - 54px) !important;
+.container {
+
   display: flex;
-  justify-content: center !important;
-  align-items: center !important;
+  justify-content: center;
+  align-items: center;
   background-color: transparent;
-  gap: 30px !important;
+  gap: 30px;
 }
 
-#container h2 {
+.container h2 {
   color: white;
   text-align: center;
   padding: 10px;
@@ -35,7 +34,7 @@
   gap: 15px;
 }
 
-#forms input {
+#forms>input {
   width: 300px;
   padding: 12px;
   border: none;
@@ -45,18 +44,11 @@
 }
 
 button {
-  background-color: #6152cd;
-  color: white;
-  border: none;
-  padding: 8.5px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transform: scale(0.98);
   width: 50%;
-  margin-top: 1.5%;
+  padding-top: 1.5%;
+
+
 }
 
 button:hover {
@@ -68,6 +60,7 @@ button:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
 .file-input {
@@ -80,7 +73,7 @@ button:hover {
   cursor: pointer;
 }
 
-.file-input > * {
+.file-input>* {
   grid-area: stack;
 }
 
@@ -92,7 +85,7 @@ button:hover {
   border-radius: 200px;
 }
 
-.file-input > .drop-zone {
+.file-input>.drop-zone {
   width: 200px;
   height: 200px;
   border: dashed 2px hsl(0, 0%, 67%);
@@ -100,7 +93,7 @@ button:hover {
   text-align: center;
 }
 
-.file-input.active > .drop-zone {
+.file-input.active>.drop-zone {
   background-color: #19335a;
 }
 
@@ -128,7 +121,7 @@ button:hover {
   object-fit: cover;
 }
 
-.file-input:hover .drop-zone > img {
+.file-input:hover .drop-zone>img {
   opacity: 0.1;
 }
 
@@ -136,5 +129,5 @@ button:hover {
   width: 200px;
   height: 50px;
   border-radius: 8px;
-  margin-top: 20px;
+  margin-top: 10px;
 }

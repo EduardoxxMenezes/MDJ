@@ -1,75 +1,154 @@
 <!DOCTYPE html>
 <html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Como pagar imposto de renda</title>
+    <link rel="icon" href="./img/logo.png" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/globalStyle.css" />
+    <link rel="stylesheet" href="./css/artigos.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Como pagar imposto de renda</title>
-  <link rel="stylesheet" href="./css/artigos.css" />
-  <link rel="icon" href="./img/logo.png" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="./css/globalStyle.css" />
-</head>
+  <body>
+    <header
+      class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
+      style="
+        display: flex;
+        width: 100vw;
+        height: 13vh;
+        background: linear-gradient(50deg, #4c4199, #111827);
+      "
+    >
+      <div class="col-md-3 mb-2 mb-md-0">
+        <a
+          href="/"
+          class="d-inline-flex align-items-center text-decoration-none"
+        >
+          <img
+            src="./img/logo.png"
+            alt="Logo"
+            width="60"
+            height="50"
+            class="me-2"
+          />
+          <span class="text-white fs-4">Manual do Jovem</span>
+        </a>
+      </div>
 
-<body>
-  <header
-    class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom"
-    style="display: flex; width: 100vw; height: 13vh;background: linear-gradient(50deg,#4c4199, #111827); ">
-    <div class="col-md-3 mb-2 mb-md-0">
-      <a href="/" class="d-inline-flex align-items-center text-decoration-none">
-        <img src="./img/logo.png" alt="Logo" width="60" height="50" class="me-2" />
-        <span class="text-white fs-4">Manual do Jovem</span>
-      </a>
-    </div>
-
-    <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="./tela-profissional.html" class="nav-link px-2 icon-home ativo"
-          style="color: white;">Profissional</a>
-      </li>
-      <li><a href="./tela-financeiro.html" class="nav-link px-2 icon-criar ativo" style="color: white;"> Financeiro</a>
-      </li>
-      <li><a href="./tela-pessoal.html" class="nav-link px-2 icon-insc ativo" style="color: white;">Pessoal</a>
-      </li>
+      <ul
+        class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0"
+        id="opcoesHeader"
+      >
+        <li>
+          <a
+            href="./tela-profissional.html"
+            class="nav-link px-2 icon-home ativo"
+            style="color: white"
+            >Profissional</a
+          >
+        </li>
+        <li>
+          <a
+            href="./tela-financeiro.html"
+            class="nav-link px-2 icon-criar ativo"
+            style="color: white"
+          >
+            Financeiro</a
+          >
+        </li>
+        <li>
+          <a
+            href="./tela-pessoal.html"
+            class="nav-link px-2 icon-insc ativo"
+            style="color: white"
+            >Pessoal</a
+          >
+        </li>
+      </ul>
 
       <div id="fotoDiv">
         <button id="fotoBtn" type="button">
           <img src="./img/fotoPadrao.png" alt="Foto Perfil" id="fotoImg" />
         </button>
       </div>
-    </ul>
+    </header>
 
-  </header>
-
-
-  <main id="container">
-
-    <div id="divInfos" class="hidden">
-      <div id="opcoesPerfil" class="hidden">
-        <a href="./editarPerfil.html" class="hrefPerfil">Editar Perfil</a>
-        <a href="./contato.html" class="hrefPerfil">Entrar em contato</a>
-        <a href="./redefinir.html" class="hrefPerfil">Redefinir Senha</a>
-        <a href="alterarFotoPerfil.html" class="hrefPerfil">Alterar foto de perfil</a>
+    <main class="container">
+      <div id="divInfos" class="hidden">
+        <div id="opcoesPerfil">
+          <a href="./editarPerfil.html" class="hrefPerfil">Editar Perfil</a>
+          <a href="./contato.html" class="hrefPerfil">Entrar em contato</a>
+          <a href="./redefinir.html" class="hrefPerfil">Redefinir Senha</a>
+          <a href="./tela-profissional.html" class="hrefOpcoesAreas"
+            ><b>Área Profissional</b></a
+          >
+          <a href="./tela-financeiro.html" class="hrefOpcoesAreas"
+            ><b>Área Financeira</b></a
+          >
+          <a href="./tela-pessoal.html" class="hrefOpcoesAreas"
+            ><b>Área Pessoal</b></a
+          >
+        </div>
       </div>
-    </div>
 
-    <h1 class="title">Como pagar imposto de renda</h1>
-    <div class="author">
-      <img src="./img/vitharLeo.jpeg" alt="Foto de Vithar Leonarda" />
-      <span class="name">Vithar Leonarda</span>
+      <h1 class="title">Como pagar imposto de renda</h1>
+      <div id="divArtigo">
+        <div class="author">
+          <img
+            src="./img/juliana.jpg"
+            alt="Foto de Juliana dos Santos Ferreira"
+          />
+          <span class="name">Juliana dos Santos Ferreira</span>
+        </div>
 
-      <p id="descrição">
-        Para pagar o imposto de renda, verifique se está obrigado a declarar,
-        organize documentos como informes de rendimentos e comprovantes de
-        despesas.
-      </p>
-    </div>
-    <footer>
-      <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
-    </footer>
-  </main>
+        <p class="descrição">
+          Declarar o Imposto de Renda é uma obrigação anual para pessoas físicas
+          que, no ano anterior, tiveram rendimentos acima dos limites
+          estabelecidos pela Receita Federal, como rendimentos tributáveis
+          superiores a R$ 30.639,90 em 2023, rendimentos isentos acima de R$ 200
+          mil, operações na bolsa de valores, posse de bens acima de R$ 800 mil,
+          ou lucro na venda de bens. Mesmo quem não se enquadra nesses critérios
+          pode declarar voluntariamente, principalmente se tiver direito à
+          restituição.
+        </p>
+        <p class="descrição">
+          Para declarar, é necessário reunir documentos como informes de
+          rendimento de empresas, bancos e corretoras, recibos de despesas com
+          saúde, educação, comprovantes de bens e dívidas, entre outros. O
+          preenchimento da declaração pode ser feito no programa da Receita
+          Federal para computador ou no aplicativo “Meu Imposto de Renda” para
+          celular. O contribuinte escolhe entre os modelos completo (com
+          deduções detalhadas) ou simplificado (com desconto padrão), e então
+          insere os dados de rendimentos, bens, dependentes, dívidas e
+          pagamentos.
+        </p>
+        <p class="descrição">
+          Após preencher tudo, o sistema mostra se há imposto a pagar ou se
+          haverá restituição. O pagamento pode ser parcelado em até 8 vezes. A
+          declaração deve ser enviada até o final de maio, e os documentos
+          usados precisam ser guardados por pelo menos cinco anos. Quem tiver
+          direito à restituição recebe em lotes ao longo do ano. Declarar com
+          antecedência e atenção evita problemas com o Fisco e garante mais
+          agilidade na devolução de valores.
+        </p>
+      </div>
 
-  <script src="./js/alterarFotoPerfil.js"></script>
-  <script src="./js/areaOpcoes.js" defer></script>
-</body>
+      <textarea
+        name=""
+        id="adicionarComentario"
+        placeholder="Adicionar um comentário"
+      ></textarea>
+      <input type="submit" id="enviarComentario" class="buttonTheme" />
+      <footer>
+        <p>&copy; 2025 Desenvolvido por TDS. Todos os direitos reservados.</p>
+      </footer>
+    </main>
 
+    <script src="./js/alterarFotoPerfil.js"></script>
+    <script src="./js/areaOpcoes.js" defer></script>
+  </body>
 </html>

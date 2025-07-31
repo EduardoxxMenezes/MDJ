@@ -4,40 +4,83 @@
 }
 
 .title {
+  text-align: center;
   font-size: 32px;
   font-weight: bold;
   margin: 30px 20px 10px;
   color: white;
 }
 
-.author {
+#divArtigo {
+  width: 100%;
+  gap: 5px;
+  border-radius: 8px;
   display: flex;
-  align-items: center;
-  margin: 10px 20px;  
+  flex-direction: column;
   background-color: #c0d4d4;
   color: black;
+}
 
+.author {
+  border-radius: 8px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  background-color: #c0d4d4;
+  color: black;
+  gap: 30px;
+  border-bottom: 2px solid snow;
+  justify-content: center;
 }
 
 .author img {
-  width: 60px;
-  height: 60px;
+  width: 75px;
+  height: 75px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid white;
   box-shadow: 0 0 10px #ffffff60;
+  gap: 5px;
 }
 
 .name {
-  font-size: 18px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  height: 75px;
+  font-size: 25px;
   font-weight: bold;
   color: #000000;
 }
 
 .descrição {
-  margin: 20px;
-  font-size: 18px;
-  line-height: 1.6;
-  color: #e6e6e6;
+  text-indent: 50px;
+  text-align: justify;
+  font-size: 15px;
+  margin-top: 20px;
+  padding: 0 20px 0 20px;
 }
 
+#adicionarComentario {
+  width: 100%;
+  height: 150px;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  resize: none;
+  border-radius: 6px;
+  box-shadow: 2px 2px 1px black;
+}
+
+html::after {
+  content: "";
+  display: block;
+  height: 120px;
+  background: linear-gradient(to top, #182031, #28334b);
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 0;
+  }
+}

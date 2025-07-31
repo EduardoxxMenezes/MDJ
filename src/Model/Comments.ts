@@ -1,29 +1,28 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn } from 'typeorm';
-import { user } from './User';
-import { article } from './Articles';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, ManyToOne } from 'typeorm';
+import { User } from './User';
+import { Article } from './Articles';
 
-@Entity('comment')
-export class comment{
+@Entity('Comment')
+export class Comment {
     @PrimaryGeneratedColumn()
     id!: number;
 
-    @Column({})
-    article: article;
+    @ManyToOne(() => Article, (article) => article.comments, { eager: true })
+    article: Article;
 
-    @Column({})
-    autor: user;
+    @ManyToOne(() => User, (user) => user.comments, { eager: true })
+    autor: User;
 
-    @Column({type: 'varchar', length: 500, nullable: false})
+    @Column({ type: 'varchar', length: 500, nullable: false })
     commentContent: string;
 
     @CreateDateColumn()
     createdAt!: Date;
 
-    constructor(autor: user, commentContent: string, createdAt: Date, article: article){
+    constructor(autor: User, commentContent: string, createdAt: Date, article: Article) {
         this.autor = autor;
         this.commentContent = commentContent;
         this.createdAt = createdAt;
         this.article = article;
-
     }
 }

@@ -9,6 +9,7 @@ const image = document.getElementById("fotoImg");
 let novaFoto = "";
 let fotoPadrao = "./img/fotoPadrao.png"
 
+
 //Evento para restaurar a imagem que a pessoa selecionou
 window.addEventListener("DOMContentLoaded", () => {
     const salva = localStorage.getItem("novaFoto");
@@ -86,3 +87,22 @@ function removerFoto() {
         localStorage.setItem("novaFoto", novaFoto);
     }
 }
+
+const btnSalvar = document.getElementById("btnSalvarPerfil");
+btnSalvar.addEventListener("click", async (e) => {
+    e.preventDefault();
+
+    const fotoPerfil = localStorage.getItem("novaFoto") || "./img/fotoPadrao.png";
+    const name = document.querySelector("#nome").value;
+    const email = document.querySelector("#email").value;
+    // Pegue o id do usuário de onde você armazenar (exemplo: localStorage, sessão, etc)
+    const userId = localStorage.getItem("userId"); // ajuste conforme sua lógica
+
+    await fetch(`http://localhost:4000/api/user/${userId}`, {
+        method: "PUT",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ userName: name, userEmail: email, profilePic: fotoPerfil })
+    });
+
+    alert("Perfil atualizado com sucesso!");
+});

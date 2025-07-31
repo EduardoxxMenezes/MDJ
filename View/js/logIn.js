@@ -16,7 +16,7 @@ form.addEventListener("submit", async (e) => {
     }
 
     try { //tenta conectar com o rout do usuario na função login
-        const res = await fetch("http://localhost:3000/api/user/login", {
+        const res = await fetch("http://localhost:4000/api/user/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -26,7 +26,7 @@ form.addEventListener("submit", async (e) => {
 
         if (res.ok) { //se a função funcionar, vai redirecionar para a tela principal
             alert("LOGIN REALIZADO COM SUCESSO!");
-            window.location.href = "./view/buscarAnimais.html";
+            window.location.href = "./View/tela-profissional.html";
         } else { //se a função falhar irá alertar erro.
             const data = await res.json();
             alert(data.message || "Erro ao fazer login");

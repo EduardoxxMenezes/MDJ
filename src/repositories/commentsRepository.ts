@@ -1,15 +1,15 @@
 import { DataSource } from "typeorm";
 import AppDataSource from "../dataBase/dataSource";
 
-import { article } from "../Model/Articles";
-import { comment } from "../Model/Comments";
-import { user } from "../Model/User";
+import { Article } from "../Model/Articles";
+import { Comment } from "../Model/Comments";
+import { User } from "../Model/User";
 
 export class CommentRepository {
-  private reposit = AppDataSource.getRepository(comment);
+  private reposit = AppDataSource.getRepository(Comment);
 
-  async createComment(autor: user, commentContent: string, createdAt: Date, article: article) {
-    const comments = new comment(autor, commentContent, createdAt, article);
+  async createComment(autor: User, commentContent: string, createdAt: Date, article: Article) {
+    const comments = new Comment(autor, commentContent, createdAt, article);
     comments.autor = autor;
     comments.commentContent = commentContent;
     comments.createdAt = createdAt;
@@ -17,10 +17,10 @@ export class CommentRepository {
     return await this.reposit.save(comments);
   }
   
-  async findCommentByArticle(article: article){
+  async findCommentByArticle(article: Article){
     return await this.reposit.findOneBy({article: article})
   }
-  async findCommentByAutor(autor: user) {
+  async findCommentByAutor(autor: User) {
     return await this.reposit.findOneBy({ autor: autor});
    
   }
@@ -30,7 +30,7 @@ export class CommentRepository {
     
   }
 
-  async updateComment(id: number, fields: Partial<comment>) {
+  async updateComment(id: number, fields: Partial<Comment>) {
     const comments = await this.findCommentById(id);
     if (!comments) return null;
 

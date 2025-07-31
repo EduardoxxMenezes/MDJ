@@ -1,5 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn } from 'typeorm';
-import { user } from './User';
+import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, UpdateDateColumn, ManyToOne, JoinColumn, OneToMany } from 'typeorm';
+import { User } from './User';
+import { Comment } from './Comments';
 
 export enum options {
     professional = 'profissional',
@@ -8,8 +9,8 @@ export enum options {
     none = 'none'
 }
 
-@Entity('article')
-export class article {
+@Entity('Article')
+export class Article {
     @PrimaryGeneratedColumn()
     id!: number;
 
@@ -28,20 +29,24 @@ export class article {
     @UpdateDateColumn()
     updatedAt!: Date;
 
-    @ManyToOne(() => user, (user) => user.article)
+    @ManyToOne(() => User, (user) => user.articles, { eager: true })
     @JoinColumn({ name: 'autor_id' })
-    autor: user;
+    autor: User;
 
-    @Column({ type: 'enum', enum: options, length: 30, nullable: false })
-    category?: options;
+    @OneToMany(() => Comment, (comment) => comment.article)
+    comments?: Comment[];
+
+    @Column({ type: 'enum', enum: options, nullable: false })
+    category: options;
 
     constructor(
         titleArticle: string,
         descArticle: string,
         contentArticle: string,
         createdAt: Date,
-        autor: user,
-        category: options = options.none
+        autor: User,
+        category: options = options.none,
+        comments?: Comment[]
     ) {
         this.titleArticle = titleArticle;
         this.descArticle = descArticle;
@@ -49,5 +54,6 @@ export class article {
         this.createdAt = createdAt;
         this.autor = autor;
         this.category = category;
+        if (comments) this.comments = comments;
     }
 }

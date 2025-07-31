@@ -1,11 +1,11 @@
 import AppDataSource from "../dataBase/dataSource";
-import { user } from "../Model/User";
+import { User } from "../Model/User";
 
 export class UserRepository {
-  private reposit = AppDataSource.getRepository(user);
+  private reposit = AppDataSource.getRepository(User);
 
   async createUser(name: string, email: string, password: string, profilePicture: string) {
-    const newUser = new user(name, email, password, profilePicture);
+    const newUser = new User(name, email, password, profilePicture);
     
     return await this.reposit.save(newUser);
   }
@@ -18,7 +18,7 @@ export class UserRepository {
     return await this.reposit.findOne({ where: { id } });
   }
 
-  async updateUser(id: number, fields: Partial<user>) {
+  async updateUser(id: number, fields: Partial<User>) {
     const existingUser = await this.findUserById(id);
     if (!existingUser) return null;
 

@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Titulo {
+    text-align: center;
+  color: #f9fafb;
+  font-size: 30px;
+  margin: 0;
+}
+
+form    {
+      width: 550px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 8px;
+  gap: 15px;
+  border-radius: 8%;
+  background-color: rgb(186, 178, 178);
+  align-items: center;
+}
+
+#forms  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button  {
+    width: 200px;
+}
+
+.inputsInfos  {
+      display: block;
+  margin: 1.8% auto;
+  font-size: auto;
+  width: 400px;
+  padding: 8px;
+  height: 25px;
+  border-radius: 8px;
+  border: none;
+}
+
+@media screen and (max-width: 767px) {
+
+  .container {
+    padding-top: 0;
+    flex-direction: column;
+  }
+
+
+form {
+  margin-right: 0;
+  width: 300px;
+}
+
+  .inputsInfos {
+  width: 280px;
+}
+}

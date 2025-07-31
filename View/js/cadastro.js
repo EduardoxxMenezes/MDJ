@@ -19,13 +19,14 @@ form.addEventListener("submit", async (e) => {
         const fotoData = await fotoRes.json();
         const fotoPerfil = fotoData.results[0].picture.large;
 
-        const res = await fetch("http://localhost:3000/api/user", {
+        const res = await fetch("http://localhost:4000/api/user", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
-           credentials: 'include',
-            body: JSON.stringify({ name, email, password, fotoPerfil })
+            credentials: 'include',
+            body: JSON.stringify({ name, email, password, profilePic: fotoPerfil })
+         
         });
 
         if (res.ok) {

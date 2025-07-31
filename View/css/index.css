@@ -1,11 +1,8 @@
-#container {
+.container {
   align-items: center;
-  height: calc(100vh - 65px - 54px);
-  width: 100%;
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 8px;
 }
 
 #esquecisenha {
@@ -17,14 +14,21 @@
 }
 
 #imgLogo {
-  width: 80px ;
-  height: auto ;
+  width: 80px;
+  height: auto;
   margin: 0;
 }
 
 figure {
   height: 80px;
   text-align: center;
+  margin: 0;
+}
+
+#Titulo {
+    text-align: center;
+  color: #f9fafb;
+  font-size: 50px;
   margin: 0;
 }
 
@@ -46,89 +50,56 @@ figure {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 500px !important;
-  height: 280px !important;
+  width: 500px;
+  height: 280px;
   background-color: rgb(186, 178, 178);
   border-radius: 5px;
   text-align: center;
 }
 
-button { background-color: #6152cd;
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: scale(0.98);
-}
-
-button:hover {
-  background-color: #342795;
-    transform: scale(1.05);
-}
-
-#usuario,
-#senha,
+.inputsInfos,
 #entrarConta,
 #criarConta {
-  display: block;
   margin: 0.5% auto;
   font-size: auto;
-  width: 400px;
+  width: 320px;
   margin-top: 3%;
 }
 
-#usuario,
-#senha {
-  height: 30px;
+#criarConta {
+  margin-top: 0;
+}
+
+.inputsInfos{
   border-radius: 5px;
   border: none;
   padding: 5px;
 }
 
-@media screen and (max-width: 799px) {
-  #container {
-  flex-direction: column;
-    height: calc(100vh - 50.73px - 43px);
-    margin-top: 20px;
-    gap: 0;
-}
+@media screen and (max-width: 767px) {
 
-footer  {
-  height: 43px !important;
+  .container {
+    padding-top: 120px;
+    flex-direction: column;
+  }
+
+  #Titulo {
+  font-size: 30px;
 }
 
 #filho1 {
   margin-right: 0;
+  width: 300px;
 }
 
-#Titulo {
-  font-size: 200%;
-}
+  #filho2 {
+    width: 300px;
+    height: 280px;
+  }
 
-#breveDescricao {
-  height: 60px !important;
-  font-size: small;
-}
-
-#filho2 {
-  width: 350px !important;
-  height: 240px !important;
-  margin-top: 30px;
-  margin: 0;
-}
-
-#loginForm > *  {
-  width: 220px;
-  height: 30px;
-  gap: 2px;
-}
-
-#entrarConta, #criarConta {
-  height: 40px !important;
-  font-size: 100% !important;
+  .inputsInfos,
+#entrarConta,
+#criarConta {
+  width: 280px;
 }
 }
